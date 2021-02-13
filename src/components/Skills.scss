@@ -1,0 +1,54 @@
+
+
+    .chart-wrapper{
+        padding:1rem 2rem;
+        .sec-title{
+            text-decoration: underline;
+        }
+        .category-chart{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            padding:2rem 0;
+            .chart{
+                position:relative;
+                display:flex;
+                justify-content:center;
+                min-height:10rem;
+                .skill-score{
+                    position: absolute;
+                    text-align: center;
+                    top: 35%;
+                    font-size:1rem;
+                }
+                .skill-desc{
+                    position: absolute;
+                    bottom: 0px;
+                    font-size:1rem;
+                }
+                canvas{
+                    display:flex!important;
+                    height:125px!important;
+                    width:auto!important;
+                }
+            }
+            
+        }
+    }
+
+
+/*.chart{
+    position:relative;
+    .chart-value{
+        position: relative;
+        bottom: 5.25rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .chart-desc{
+        font-size:1rem;
+        position: relative;
+        bottom: 2rem;
+    }
+}*/
+
