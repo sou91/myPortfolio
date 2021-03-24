@@ -1,9 +1,10 @@
 
 
     .chart-wrapper{
-        padding:1rem 2rem;
+        padding:2rem 2rem;
         .sec-title{
             text-decoration: underline;
+            text-align: left;
         }
         .category-chart{
             display: flex;
@@ -36,19 +37,4 @@
         }
     }
 
-
-/*.chart{
-    position:relative;
-    .chart-value{
-        position: relative;
-        bottom: 5.25rem;
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
-    .chart-desc{
-        font-size:1rem;
-        position: relative;
-        bottom: 2rem;
-    }
-}*/
 

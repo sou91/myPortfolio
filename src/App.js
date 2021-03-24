@@ -7,9 +7,29 @@ import westFace from './assets/west.png';
 import northFace from './assets/north.png';
 
 import arrow from './assets/arrow.svg';
-import Skills from './components/Skills'
-import Anime, { anime } from 'react-anime';
+import Skills from './components/Skills/Skills';
+import ContactMe from './components/ContactMe/ContactMe';
+import Experience from './components/Experience/Experience';
+import AboutMe from './components/AboutMe/AboutMe';
+
 import './App.scss';
+import Axios from 'axios'
+Axios.interceptors.request.use(function (config) {
+    // spinning start to show
+    // UPDATE: Add this code to show global loading indicator
+    document.body.classList.add('loading-indicator');
+    return config
+  }, function (error) {
+    return Promise.reject(error);
+  });
+Axios.interceptors.response.use(function (response) {
+// spinning hide
+// UPDATE: Add this code to hide global loading indicator
+document.body.classList.remove('loading-indicator');
+return response;
+}, function (error) {
+return Promise.reject(error);
+});
 
 const info = {
   Name: 'Sourabh Sontakke',
@@ -31,7 +51,7 @@ const info = {
     ],
     'Frameworks': [
       {
-        technology: 'React',
+        technology: 'React Js',
         desc: 'React Js,React Native, Redux',
         ability: [80, 20]
       },
@@ -41,7 +61,7 @@ const info = {
         ability: [75, 25]
       },
       {
-        technology: 'Salesforce Lightning',
+        technology: 'Salesforce Aura/LWC',
         ability: [70, 30]
       },
       {
@@ -64,7 +84,27 @@ const info = {
       }
     ],
     'Tools': ['Git', 'DialogFlow', 'ChartJs', 'Figma', 'Jira', 'Azure DevOps', 'Gitlab']
-  }
+  },
+  Education:[{ability:[82,18],std:'X<sup>th</sup> Std',location:'Lok Puram; Thane'},
+            {ability:[87,13],std:'XII<sup>th</sup> Std',location:'DAV; Airoli'},
+            {ability:[62,38],std:'Engineering',location:'TCET; Mumbai Uni'}
+  ],
+  Projects:[
+    {title:'CRUD Application',
+    technology:['React JS','Firebase'],
+    desc:'A React CRUD application, connected with firebase to practice the basics of hooks and state management.',
+    gitURL:'https://github.com/sou91/crudMovie',
+    webURL:'https://focused-cori-c31cef.netlify.app/',
+    status:'Complete'
+    },
+    {title:'Portfolio',
+    technology:['React JS','Firebase','Node Js','Firebase'],
+    desc:'This is the application you are currently viewing. It is a show case of my experience as a Front End developer.',
+    gitURL:'https://github.com/sou91/myPortfolio',
+    webURL:'',
+    status:'Complete'
+    }
+  ]
 }
 class App extends React.Component {
   state = {
@@ -75,6 +115,10 @@ class App extends React.Component {
     showSection: false,
     sectionClickCount: 0
   }
+  constructor(props) {
+    super();
+    this.myRef = React.createRef();
+  }
   controlClicked = (sectionClicked) => {
     this.setState({
       animateControl: 'openAnimation 0.75s both ease-in',
@@ -84,6 +128,9 @@ class App extends React.Component {
   }
   setSecHovered = (section) => {
     this.setState({ sectionHovered: section });
+  }
+  componentDidMount(){
+    this.myRef.current.classList.add('fade-face');
   }
   render() {
     let sectionToShow = null;
@@ -97,6 +144,12 @@ class App extends React.Component {
     }
     if (this.state.sectionClicked === 'Skills' && this.state.showSection) {
       sectionToShow = <Skills skillInfo={info.Skills} />
+    }else if(this.state.sectionClicked==='Contact Me' && this.state.showSection){
+      sectionToShow = <ContactMe/>
+    }else if(this.state.sectionClicked==='Experience'  && this.state.showSection){
+      sectionToShow=<Experience/>
+    }else if(this.state.sectionClicked==='About Me'  && this.state.showSection){
+      sectionToShow=<AboutMe educationInfo={info.Education} projectInfo={info.Projects}/>
     }
     switch (this.state.sectionHovered) {
       case 'skills':
@@ -112,13 +165,12 @@ class App extends React.Component {
         imagetoShow = <img src={southFace} className='face-img' />;
         break;
       default:
-        imagetoShow = <img src={myFace} className='face-img' />;;
+        imagetoShow = <img src={myFace} className='face-img' ref={this.myRef}/>;;
     }
-
-
     return (
       <div className="App">
-        <header className="App-header">
+        
+        <div className="App-header">
 
           <div className={this.state.sectionClicked != '' ? 'section-wrapper' : ''} />
           <div className='face-imgs' style={{ animation: this.state.animateControl }}>
@@ -194,7 +246,7 @@ class App extends React.Component {
           }
 
 
-        </header>
+        </div>
       </div>
     )
   }

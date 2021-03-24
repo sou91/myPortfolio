@@ -1,0 +1,43 @@
+.contact-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left:3.75rem;
+    font-size:1.25rem;
+    .contact-msg{
+        margin:3rem 0 0 0;
+        text-align: left;
+    }
+    textarea{
+        width: 32rem;
+        height: 8rem;
+        display: block;
+        margin-top: 1rem;
+        border-radius: .25rem;
+    }
+    .contact-sec{
+        width: 51%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5rem;
+    }
+    button{
+        background-color: #008CBA; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+    img{
+        filter:invert(100%);
+        width:auto;
+        height:2rem;
+    }
+}
