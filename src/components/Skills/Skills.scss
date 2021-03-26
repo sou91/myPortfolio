@@ -37,4 +37,19 @@
         }
     }
 
-
+    @media only screen and (max-width: 768px) {
+        .chart-wrapper .category-chart .chart {
+            min-height: 6rem;
+            canvas{
+                height: 64px !important;
+            }
+            .skill-score{
+                top: 29%;
+                font-size: 11px;
+            }
+            .skill-desc{
+                bottom: 8px;
+                font-size: 13px;
+            }
+        }
+    }

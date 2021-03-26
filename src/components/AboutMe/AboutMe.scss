@@ -128,6 +128,29 @@ ul {
         padding-left:1rem;
     }
   }
-
+  @media only screen and (max-width: 768px) {
+    .about-wrapper  {
+        min-height: 6rem;
+        padding:0 0.5rem 3rem 0.5rem;
+        .category-chart .chart{
+            min-height: 7rem;
+            canvas{
+                height: 64px !important;
+            }
+            .skill-score{
+                top: 26%;
+                font-size: 11px;
+            }
+            .skill-desc{
+                bottom: 26px;
+                font-size: 13px;
+            }
+            .skill-desc2{
+                bottom: 5px;
+                font-size: 13px; 
+            }
+    }
+    }
+}
 
 

@@ -91,3 +91,20 @@ $dot-diameter: 8px;
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .timeline{
+    font-size:10px;
+    .entry .title:before{
+      width:1rem;
+      height:1rem;
+      right:-12px;
+    }
+  }
+  .entry .body ul div{
+    padding-left:0.5rem;
+  }
+  .expBody{
+    padding:12vh 0.5rem 12vh 0.5rem;
+  }
+}

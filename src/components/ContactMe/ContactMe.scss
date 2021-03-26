@@ -41,3 +41,15 @@
         height:2rem;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .contact-me {
+        margin-left:0.75rem;
+        textarea{
+            width:95%;
+        }
+        .contact-sec{
+            width:95%;
+        }
+    }
+}

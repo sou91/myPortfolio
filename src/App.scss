@@ -38,16 +38,6 @@
   border-radius: 50%;
   display: inline-block;
 }
-.face-img{
-  border-radius: 50%;
-  display: inline-block;
-  top: 22.5px;
-  left: -2px;
-  position:relative;
-  z-index:1;
-  height: 180px;
-  width: 180px;
-}
 .fade-face{
   animation: fadein 2s linear;
 }
@@ -61,55 +51,7 @@
   position:absolute;
   top:25vh;
 }
-.arc1, .arc2, .arc3, .arc4{
-  z-index: 1;
-  height: 130px;
-  width: 130px;
-}
-.arc1{
-  position: relative;
-  bottom: 47px;
-  left: 13.2rem;
-  transition: box-shadow 2s;
-  animation: arc1M 1s linear ;
-}
-@keyframes arc1M {
-  from {opacity: 0;bottom: 70px;left: 11.2rem;}
-  to {opacity: 1}
-}
-.arc2{
-  position: relative;
-  bottom: 50px;
-  left: 226px;
-  transition: box-shadow 2s;
-  animation: arc2M 1s linear ;
-}
-@keyframes arc2M {
-  from {opacity: 0;bottom: 74px;left: 252px;}
-  to {opacity: 1}
-}
-.arc3{
-  position: relative;
-  top: 96px;
-  right: 85px;
-  transition: box-shadow 2s;
-  animation: arc3M 1s linear ;
-}
-@keyframes arc3M {
-  from {opacity: 0;top: 129px;right: 58px;}
-  to {opacity: 1}
-}
-.arc4{
-  position: relative;
-  right: 359px;
-  top: 95px;
-  transition: box-shadow 2s;
-  animation: arc4M 1s linear ;
-}
-@keyframes arc4M {
-  from {opacity: 0;top: 126px;right: 389px;}
-  to {opacity: 1}
-}
+
 
 
 .intro{
@@ -160,15 +102,7 @@
 object{
 pointer-events: visible;
 } 
-svg path:nth-child(1) {
-  transition: fill .2s linear;
-}
-svg:hover path:nth-child(1){
-fill:orange;
-}
-.selectedarc path:nth-child(1){
-  fill:orange!important;
-}
+
 .section-wrapper{
   background-color: black;    
   position: absolute;
@@ -198,7 +132,7 @@ fill:orange;
   }
 }
 .section-title{
-  padding:1rem 11px 8px;
+  padding:1rem 11px 5rem;
   text-align: left;
   font-size:24px;
   span{
@@ -220,5 +154,27 @@ fill:orange;
 
   100% {
       transform:translate(-75%,-70%);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .face-imgs{
+    position: static;
+    top:0;
+    margin-bottom: 0;
+  }
+  .face-img{
+    top: -38.5px;
+    left: 72px;
+  }
+  .intro{
+    margin-top: 2rem;
+  }
+  .section-wrapper{
+    display: none;
+  }
+  .section-wrap{
+    margin-left: 0;
+    width: 100%;
   }
 }

@@ -15,10 +15,10 @@ function Experience(props){
                     props.educationInfo.map((value) => {
                         return <div className='chart'>
                             <DoughnutC data={value}/>
-                            <div className='skill-score'>{value.ability[0]}</div>
-                            <div className='skill-desc'>{ReactHtmlParser (value.std)}</div>
-                            <div className='skill-desc2'>{value.location}</div>
-                        </div>
+                                <div className='skill-score'>{value.ability[0]}</div>
+                                <div className='skill-desc'>{ReactHtmlParser (value.std)}</div>
+                                <div className='skill-desc2'>{value.location}</div>
+                            </div>
 
 
                     })
