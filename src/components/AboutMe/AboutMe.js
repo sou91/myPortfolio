@@ -1,4 +1,4 @@
-import React,  {useState}from 'react';
+import React from 'react';
 import './AboutMe.scss'
 import DoughnutC from '../DoughNut/Doughnut'
 import ReactHtmlParser from 'react-html-parser'; 

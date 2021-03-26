@@ -59,7 +59,7 @@ if (!isDev && cluster.isMaster) {
               "Name": "Sourabh Sontakke"
             }
           ],
-          "Subject": "AJ Portfolio | Feedback",
+          "Subject": "SS Portfolio | Feedback",
           "TextPart": "Feedback",
           "HTMLPart": "<h3>FeedBack</h3><p>"+req.body.userMessage+"</p>",
           "CustomID": "portfolio-feedback"

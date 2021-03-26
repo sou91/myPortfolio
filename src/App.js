@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
 import myFace from './assets/myFace.png';
 import eastFace from './assets/east.png';
 import southFace from './assets/south.png';
@@ -17,7 +16,7 @@ import {
   MobileView,
   isMobile
 } from "react-device-detect"
-import DraggableCore from 'react-draggable'; 
+
 
 import './App.scss';
 import Axios from 'axios'
