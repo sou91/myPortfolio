@@ -5,7 +5,8 @@ import Draggable from 'react-draggable';
 function ControlCenter(props){
     
     return(
-        <Draggable allowAnyClick={true}>
+        <Draggable disabled={props.mobileCenter?false:true} allowAnyClick={true}>
+        
         <div className={props.mobileCenter?'mobile-position':'og-position'}>   
             <div className='face-imgs' style={{ animation: props.animateControl, display:props.isMobile }}>
                 

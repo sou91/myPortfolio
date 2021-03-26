@@ -1,7 +1,9 @@
-.face-imgs{
-    position:absolute;
-    top:25vh;
-  }
+.selectedarc path:nth-child(1){
+  fill:orange!important;
+}
+.og-position{
+  position: absolute;
+  margin-bottom: 8rem;
   .face-img{
     border-radius: 50%;
     display: inline-block;
@@ -18,9 +20,7 @@
   svg:hover path:nth-child(1){
   fill:orange;
   }
-  .selectedarc path:nth-child(1){
-    fill:orange!important;
-  }
+
   .arc1, .arc2, .arc3, .arc4{
     z-index: 1;
     height: 130px;
@@ -70,57 +70,67 @@
     from {opacity: 0;top: 126px;right: 389px;}
     to {opacity: 1}
   }
-  @media only screen and (max-width: 768px) {
-  .og-position{
-    .arc1{
-      bottom: -42px;
-      left: 0.2rem;
-      animation: arc1M 1s linear ;
-    }
-    @keyframes arc1M {
-      from {opacity: 0;bottom: -22px;left: -1.8rem;}
-      to {opacity: 1}
-    }
-    .arc2{
-      bottom: -39px;
-      left: 15px;
-      animation: arc2M 1s linear ;
-    }
-    @keyframes arc2M {
-      from {opacity: 0;bottom: -20px;left: 38px;}
-      to {opacity: 1}
-    }
-    .arc3{
-      top: 37px;
-      right: 11px;
-      animation: arc3M 1s linear ;
-    }
-    @keyframes arc3M {
-      from {opacity: 0;top: 56px;right: -11px;}
-      to {opacity: 1}
-    }
-    .arc4{
-      right: 4rem;
-      top: -121px;
-    }
-    @keyframes arc4M {
-      from {opacity: 0;top: -103px;right: 6rem;}
-      to {opacity: 1}
+}
+  @media only screen and (max-width: 439px){
+    .og-position{
+      margin-bottom: -3rem;
+      .face-img{
+        top: -40.5px;
+        left: 72px;
+      }
+      .arc1{
+        bottom: -42px;
+        left: 0.2rem;
+        animation: arc1M 1s linear ;
+      }
+      @keyframes arc1M {
+        from {opacity: 0;bottom: -22px;left: -1.8rem;}
+        to {opacity: 1}
+      }
+      .arc2{
+        bottom: -39px;
+        left: 15px;
+        animation: arc2M 1s linear ;
+      }
+      @keyframes arc2M {
+        from {opacity: 0;bottom: -20px;left: 38px;}
+        to {opacity: 1}
+      }
+      .arc3{
+        top: 37px;
+        right: 11px;
+        animation: arc3M 1s linear ;
+      }
+      @keyframes arc3M {
+        from {opacity: 0;top: 56px;right: -11px;}
+        to {opacity: 1}
+      }
+      .arc4{
+        right: 4rem;
+        top: -121px;
+      }
+      @keyframes arc4M {
+        from {opacity: 0;top: -103px;right: 6rem;}
+        to {opacity: 1}
+      }
     }
   }
+  @media only screen and (max-width: 768px) {
+  
   .mobile-position{
     position:relative;
     z-index:100;
   .face-imgs{
       position: absolute;
-      top: -55px;
-      right: 35px;
+      top: -96px;
+    right: -68px;
     .face-img{
       height: 90px;
       width: 90px;
       z-index: 2;
-      top: -40.5px;
-      left: 73px;
+      top: -0.5px;
+      left: 1px;
+      position: relative;
     }
     .arc1, .arc2, .arc3, .arc4{
       z-index: 1;
@@ -128,24 +138,28 @@
       width: 65px;
     }
     .arc1{
-      bottom: 75px;
-      left: 181px;
+      position: relative;
+      bottom: 37px;
+      left: 107px;
       animation: none;
     }
     .arc2{
-      left: 186px;
-      bottom: 77px;
-      animation: none;
+      left: 114px;
+    bottom: 39px;
+    animation: none;
+    position: relative;
     }
     .arc3{
-      top: -3px;
-      left: 30px;
-      animation: none;
+      top: 37px;
+    left: -42px;
+    animation: none;
+    position: relative;
     }
     .arc4{
-      top: -81px;
-      left: 71px;
-      animation: none;
+      position: relative;
+    top: 36px;
+    left: -179px;
+    animation: none;
     }
   }
 }
