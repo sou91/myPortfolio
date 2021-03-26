@@ -2,6 +2,7 @@ const express = require('express');
 var cors = require('cors')
 var bodyParser=require("body-parser");
 require('dotenv').config();
+const path = require('path');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -14,7 +15,8 @@ var corsOptions = {
 
 const isDev = process.env.NODE_ENV !== 'production';
 const PORT = process.env.PORT || 5000;
-
+const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.static(buildPath));
 const mailjet = require ('node-mailjet').connect('fb33d84faa0387a436016d9cb3b5d6ae', '1af760e9af3263cd3b2d461fc50035b9')
 
   app.use(cors({
