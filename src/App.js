@@ -146,7 +146,7 @@ class App extends React.Component {
         this.setState({
           sectionHovered: ''
         })
-      }.bind(this), 1000);
+      }.bind(this), 3000);
     }
   }
   componentDidMount(){
