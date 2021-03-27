@@ -141,6 +141,13 @@ class App extends React.Component {
   }
   setSecHovered = (section) => {
     this.setState({ sectionHovered: section });
+    if(isMobile){
+      setTimeout(function () {
+        this.setState({
+          sectionHovered: ''
+        })
+      }.bind(this), 1000);
+    }
   }
   componentDidMount(){
     this.myRef.current.classList.add('fade-face');
