@@ -190,8 +190,8 @@ class App extends React.Component {
       <div className="App">
         <div className="App-header">
          
-          <div className={this.state.sectionClicked != '' ? 'section-wrapper' : ''} />
-          <ControlCenter sectionClicked={this.state.sectionClicked} controlClicked={this.controlClicked} setSecHovered={this.setSecHovered} imagetoShow={imagetoShow} animateControl={this.state.animateControl} isMobile={this.state.mobileDisp}/>
+          <div className={this.state.sectionClicked != '' ? 'section-wrapper' : ''}/ >
+          {<ControlCenter sectionClicked={this.state.sectionClicked} controlClicked={this.controlClicked} setSecHovered={this.setSecHovered} imagetoShow={imagetoShow} animateControl={this.state.animateControl} isMobile={this.state.mobileDisp}/>}
           {this.state.sectionClicked == ''
             ? <div className='intro'>
               <span>{info.Name}</span>

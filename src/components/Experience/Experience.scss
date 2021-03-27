@@ -12,6 +12,15 @@ $dot-diameter: 8px;
       box-sizing: border-box;
     }
   }
+  @keyframes heightAnimate {
+    0% {
+      height: 0;
+    }
+  
+    100% {
+        height:100%;
+    }
+  }
 .timeline {
   position: relative;
   &:before {
@@ -22,6 +31,7 @@ $dot-diameter: 8px;
     bottom: 0px;
     width: $border-width;
     background: #ddd;
+    animation: heightAnimate 2s linear;
   }
   &:after {
     content: "";
