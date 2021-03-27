@@ -96,14 +96,16 @@ const info = {
             {ability:[62,38],std:'Engineering',location:'TCET; Mumbai Uni'}
   ],
   Projects:[
-    {title:'CRUD Application',
+    {
+    title:'CRUD Application',
     technology:['React JS','Firebase'],
     desc:'A React CRUD application, connected with firebase to practice the basics of hooks and state management.',
     gitURL:'https://github.com/sou91/crudMovie',
     webURL:'https://focused-cori-c31cef.netlify.app/',
     status:'Complete'
     },
-    {title:'Portfolio',
+    {
+    title:'Portfolio',
     technology:['React JS','Firebase','Node Js','Firebase'],
     desc:'This is the application you are currently viewing. It is a show case of my experience as a Front End developer.',
     gitURL:'https://github.com/sou91/myPortfolio',
@@ -190,7 +192,7 @@ class App extends React.Component {
       <div className="App">
         <div className="App-header">
          
-          <div className={this.state.sectionClicked != '' ? 'section-wrapper' : ''}/ >
+          <div className={this.state.sectionClicked != '' ? 'section-wrapper' : ''} />
           {<ControlCenter sectionClicked={this.state.sectionClicked} controlClicked={this.controlClicked} setSecHovered={this.setSecHovered} imagetoShow={imagetoShow} animateControl={this.state.animateControl} isMobile={this.state.mobileDisp}/>}
           {this.state.sectionClicked == ''
             ? <div className='intro'>
