@@ -24,6 +24,7 @@
 }
 .App {
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .App-logo {
@@ -130,6 +131,7 @@ pointer-events: visible;
   padding:1rem 11px 5rem;
   text-align: left;
   font-size:24px;
+  font-weight: 600;
   span{
     padding-left: 0.5rem;
   }

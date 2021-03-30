@@ -45,7 +45,7 @@ function ContactMe(){
         <div className='contact-me'>
             <div className='contact-msg'>Send me a message:</div>
             <textarea onChange={handleChange} value={messageStat.message}/>
-            <button onClick={sendEmail}>Send</button>
+            <button  class='send-btn' onClick={sendEmail}>Send</button>
             <div class='contact-sec'>
             <a href="mailto: sourabh.sontakke91@gmail.com" title="Email Address">
                 <img src={email} />
