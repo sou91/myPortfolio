@@ -128,6 +128,7 @@ class App extends React.Component {
     this.myRef = React.createRef();
   }
   controlClicked = (sectionClicked) => {
+    document.querySelector('.typed-cursor').style.display='none'
     if(isMobile){
       this.setSecHovered(sectionClicked)
     }
