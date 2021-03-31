@@ -11,15 +11,14 @@ import ContactMe from './components/ContactMe/ContactMe';
 import Experience from './components/Experience/Experience';
 import AboutMe from './components/AboutMe/AboutMe';
 import ControlCenter from './components/ControlCenter/ControlCenter';
-
 import {
   MobileView,
   isMobile
 } from "react-device-detect"
-
-
+import Typed from 'typed.js';
 import './App.scss';
-import Axios from 'axios'
+import Axios from 'axios';
+
 Axios.interceptors.request.use(function (config) {
     // spinning start to show
     // UPDATE: Add this code to show global loading indicator
@@ -151,6 +150,11 @@ class App extends React.Component {
   }
   componentDidMount(){
     this.myRef.current.classList.add('fade-face');
+    var options = {
+      strings: [info.Role],
+      typeSpeed: 100
+    };
+   var typed = new Typed('#role', options);
   }
   render() {
     let sectionToShow = null;
@@ -203,10 +207,9 @@ class App extends React.Component {
           {<ControlCenter sectionClicked={this.state.sectionClicked} controlClicked={this.controlClicked} setSecHovered={this.setSecHovered} imagetoShow={imagetoShow} animateControl={this.state.animateControl} isMobile={this.state.mobileDisp}/>}
           {this.state.sectionClicked == ''
             ? <div className='intro'>
-              <span>{info.Name}</span>
-              <br />
-              {info.Role}
-            </div>
+                <div>{info.Name}</div>
+                <span id='role'></span>
+              </div>
             : <div className='section-wrap'>
                 <div className='section-title'>
                   <img src={arrow} />
