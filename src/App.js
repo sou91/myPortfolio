@@ -110,6 +110,14 @@ const info = {
     gitURL:'https://github.com/sou91/myPortfolio',
     webURL:'',
     status:'Complete'
+    },
+    {
+      title:'Covid Tracker',
+      technology:['React JS','Leaflet Maps'],
+      desc:'A Covid tracker application, to check country wise cases and corresponding info on map.',
+      gitURL:'https://github.com/sou91/covidTracker',
+      webURL:'https://main--silly-ardinghelli-5fcde1.netlify.app/',
+      status:'Complete'
     }
   ]
 }
